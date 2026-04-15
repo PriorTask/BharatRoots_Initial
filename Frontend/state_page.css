@@ -1,0 +1,123 @@
+:root {
+  --accent: #b45309;
+  --muted: #6b7280;
+  --bg: #fffaf0;
+  --card: #ffffff;
+  --maxwidth: 1100px;
+  --radius: 14px;
+  --pad: 18px;
+  --gap: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #fff 100%);
+  color: #111827;
+  line-height: 1.45;
+}
+
+/* HEADER (adjusted for your new HTML) */
+header {
+  text-align: center;
+  max-width: var(--maxwidth);
+  margin: 20px auto;
+  padding: 12px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+header h1 {
+  margin: 6px 0;
+  font-size: clamp(20px, 3.4vw, 34px);
+  color: var(--accent);
+}
+
+header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* MAP */
+#state-map {
+  display: block;
+  width: 100%;
+  max-width: var(--maxwidth);
+  height: 300px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* MAIN CONTAINER */
+main {
+  max-width: var(--maxwidth);
+  margin: 20px auto;
+  padding: 0 var(--pad);
+}
+
+/* GRID LAYOUT (same as old design) */
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+/* SECTION CARDS (converted from .param-card) */
+section {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(11, 12, 13, 0.04);
+  border: 1px solid rgba(16, 24, 40, 0.03);
+  min-height: 260px;
+}
+
+/* CENTER LAST CARD (music) */
+section:last-child {
+  grid-column: 1 / -1;
+  max-width: 500px;
+  justify-self: center;
+}
+
+/* HEADINGS */
+section h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+/* TEXT */
+section p {
+  margin: 0 0 12px;
+  color: #374151;
+}
+
+/* LIST */
+section ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #374151;
+}
+
+section ul li {
+  margin: 10px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}

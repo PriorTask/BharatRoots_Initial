@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BharatRoots-Shop</title>
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="home.html" class="navbar-logo">BharatRoots</a>
+        <button class="navbar-toggle" id="mobile-menu"></button>
+        <ul class="navbar-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="map.html">Maps</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="travel.html">Travel</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="crafts_intro">
+      <div class="overlay">
+        <h2>Exquisite Crafts</h2>
+        <p>Timeless Tradition & Artistic Heritage</p>
+      </div>
+    </section>
+
+    <!-- Search and Filters -->
+    <div class="filter-container">
+      <input type="text" id="searchInput" placeholder="Search all Crafts" />
+      <div class="dropdowns">
+        <select id="interestFilter">
+          <option value="all">All Crafts</option>
+          <option value="handicraft">Handcraft</option>
+          <option value="artwork">Artwork</option>
+          <option value="jewelry">Jewellery</option>
+          <option value="textile">Textiles</option>
+        </select>
+
+        <select id="regionFilter">
+          <option value="all">All Regions</option>
+          <option value="bengal">Bengal</option>
+          <option value="rajasthan">Rajasthan</option>
+          <option value="kashmir">Kashmir</option>
+          <option value="tamilnadu">Tamil Nadu</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <section class="product-grid">
+      <!-- Handcraft -->
+      <div class="product-card" data-category="handicraft" data-region="bengal">
+        <img src="Images/shop_card_img_1.jpg" alt="Bengal Handcraft" />
+        <h3>Terracotta Clay Pot (Bengal)</h3>
+        <p>₹450</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div
+        class="product-card"
+        data-category="handicraft"
+        data-region="rajasthan"
+      >
+        <img src="Images/shop_card_img_2.jpg" alt="Rajasthan Handcraft" />
+        <h3>Carved Wooden Toy (Rajasthan)</h3>
+        <p>₹520</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div
+        class="product-card"
+        data-category="handicraft"
+        data-region="kashmir"
+      >
+        <img src="Images/shop_card_img_3.jpg" alt="Kashmir Handcraft" />
+        <h3>Paper Mâché Box (Kashmir)</h3>
+        <p>₹600</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div
+        class="product-card"
+        data-category="handicraft"
+        data-region="tamilnadu"
+      >
+        <img src="Images/shop_card_img_4.jpg" alt="Tamil Nadu Handcraft" />
+        <h3>Brass Lamp (Tamil Nadu)</h3>
+        <p>₹480</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <!-- Artwork -->
+      <div class="product-card" data-category="artwork" data-region="bengal">
+        <img src="Images/shop_card_img_5.jpg" alt="Bengal Artwork" />
+        <h3>Madhubani Painting (Bengal)</h3>
+        <p>₹1,200</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="artwork" data-region="rajasthan">
+        <img src="Images/shop_card_img_6.jpg" alt="Rajasthan Artwork" />
+        <h3>Warli Folk Art (Rajasthan)</h3>
+        <p>₹950</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="artwork" data-region="kashmir">
+        <img src="Images/shop_card_img_7.jpg" alt="Kashmir Artwork" />
+        <h3>Pahari Miniature (Kashmir)</h3>
+        <p>₹1,500</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="artwork" data-region="tamilnadu">
+        <img src="Images/shop_card_img_8.jpg" alt="Tamil Nadu Artwork" />
+        <h3>Tanjore Painting (Tamil Nadu)</h3>
+        <p>₹2,000</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <!-- Jewellery -->
+      <div class="product-card" data-category="jewelry" data-region="bengal">
+        <img src="Images/shop_card_img_9.jpg" alt="Bengal Jewellery" />
+        <h3>Dokra Necklace (Bengal)</h3>
+        <p>₹2,300</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="jewelry" data-region="rajasthan">
+        <img src="Images/shop_card_img_10.jpg" alt="Rajasthan Jewellery" />
+        <h3>Tribal Silver Bangles (Rajasthan)</h3>
+        <p>₹1,800</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="jewelry" data-region="kashmir">
+        <img src="Images/shop_card_img_11.jpg" alt="Kashmir Jewellery" />
+        <h3>Kundan Necklace (Kashmir)</h3>
+        <p>₹3,000</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="jewelry" data-region="tamilnadu">
+        <img src="Images/shop_card_img_12.jpg" alt="Tamil Nadu Jewellery" />
+        <h3>Temple Jewellery (Tamil Nadu)</h3>
+        <p>₹2,900</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <!-- Textiles -->
+      <div class="product-card" data-category="textile" data-region="bengal">
+        <img src="Images/shop_card_img_13.jpg" alt="Bengal Textile" />
+        <h3>Kantha Saree (Bengal)</h3>
+        <p>₹3,500</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="textile" data-region="rajasthan">
+        <img src="Images/shop_card_img_14.jpg" alt="Rajasthan Textile" />
+        <h3>Bandhani Dupatta (Rajasthan)</h3>
+        <p>₹2,800</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="textile" data-region="kashmir">
+        <img src="Images/shop_card_img_15.jpg" alt="Kashmir Textile" />
+        <h3>Pashmina Shawl (Kashmir)</h3>
+        <p>₹4,200</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="textile" data-region="tamilnadu">
+        <img src="Images/shop_card_img_16.jpg" alt="Tamil Nadu Textile" />
+        <h3>Kanjivaram Saree (Tamil Nadu)</h3>
+        <p>₹5,000</p>
+        <button class="add-btn">Add to Cart</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>BharatRoots</h3>
+          <p>Exploring the soul of India — one state at a time.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/explore">Explore States</a></li>
+            <li><a href="/trade">Trade</a></li>
+            <li><a href="/profile">My Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: contact@bharatroots.in</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 BharatRoots. Made with ❤️ in India.</p>
+      </div>
+    </footer>
+
+    <script src="shop.js"></script>
+  </body>
+</html>

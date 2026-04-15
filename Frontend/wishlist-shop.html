@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h2>Product Wishlist</h2>
+      <div>
+        <a href="profile.html">Profile</a> &nbsp; | &nbsp;
+        <a href="shop.html">Shop</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty" style="display: none">
+        No products in wishlist yet — add some from Shop ❤️
+      </div>
+    </main>
+
+    <script>
+      // wishlist-shop.js inline
+      async function loadProductWishlist() {
+        let items = [];
+        try {
+          const res = await fetch("/api/wishlist/shop");
+          if (!res.ok) throw new Error("no backend");
+          items = await res.json();
+        } catch (err) {
+          items = JSON.parse(localStorage.getItem("productWishlist") || "[]");
+        }
+
+        const grid = document.getElementById("grid");
+        const empty = document.getElementById("empty");
+        grid.innerHTML = "";
+
+        if (!items.length) {
+          empty.style.display = "";
+          return;
+        } else empty.style.display = "none";
+
+        items.forEach((item) => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+          <img src="${
+            item.img || "Images/product_placeholder.jpg"
+          }" alt="${escapeHtml(item.title)}"/>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.price)}</p>
+          <p><small>${escapeHtml(item.category)} • ${escapeHtml(
+            item.region
+          )}</small></p>
+          <div class="card-actions">
+            <button class="btn remove">Remove</button>
+            <button class="btn openmap">View on Map</button>
+          </div>
+        `;
+          const removeBtn = card.querySelector(".remove");
+          removeBtn.addEventListener("click", async () => {
+            try {
+              const res = await fetch(
+                `/api/wishlist/shop/${encodeURIComponent(item.id)}`,
+                { method: "DELETE" }
+              );
+              if (!res.ok) throw new Error("delete failed");
+              card.remove();
+            } catch (err) {
+              let arr = JSON.parse(
+                localStorage.getItem("productWishlist") || "[]"
+              );
+              arr = arr.filter((i) => i.id !== item.id);
+              localStorage.setItem("productWishlist", JSON.stringify(arr));
+              card.remove();
+            }
+          });
+
+          const mapBtn = card.querySelector(".openmap");
+          mapBtn.addEventListener("click", () => {
+            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              item.title
+            )}`;
+            window.open(url, "_blank");
+          });
+
+          grid.appendChild(card);
+        });
+      }
+
+      function escapeHtml(s) {
+        return (s || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
+      loadProductWishlist();
+    </script>
+  </body>
+</html>

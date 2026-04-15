@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BharatRoots-Travel</title>
+    <link rel="stylesheet" href="travel.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="home.html" class="navbar-logo">BharatRoots</a>
+        <button class="navbar-toggle" id="mobile-menu"></button>
+        <ul class="navbar-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="map.html">Maps</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="travel.html">Travel</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <div
+      class="travel_intro"
+      style="background-image: url('Images/travelpage_img_main_1.jpg')"
+    >
+      <h1>EXPLORE CULTURAL DESTINATIONS</h1>
+      <p>Discover the unseen beauty of India</p>
+    </div>
+
+    <!-- Search & Plan Section -->
+    <div class="search-section">
+      <input type="text" placeholder="Search Destinations" class="search-bar" />
+      <button class="plan-btn">Plan My Itinerary</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <div class="filter">
+        <label for="interest">Interests:</label>
+        <select id="interest">
+          <option>All</option>
+          <option>Wildlife</option>
+          <option>Heritage</option>
+          <option>Spiritual</option>
+          <option>Adventure</option>
+        </select>
+      </div>
+      <div class="filter">
+        <label for="region">Regions:</label>
+        <select id="region">
+          <option>All</option>
+          <option>Assam</option>
+          <option>Rajasthan</option>
+          <option>Tamil Nadu</option>
+          <option>Himachal Pradesh</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Destination Cards -->
+    <div class="destination-cards">
+      <!-- 🐘 Wildlife -->
+      <div
+        class="card"
+        data-title="Kaziranga National Park, Assam"
+        data-desc="Home to the majestic one-horned rhinos and a UNESCO World Heritage Site."
+        data-time="6:00 AM – 5:00 PM"
+        data-best="Nov – Apr"
+      >
+        <img src="Images/travel_img_1.jpg" alt="Kaziranga" />
+        <h3>Kaziranga National Park</h3>
+        <p>Assam</p>
+      </div>
+      <div
+        class="card"
+        data-title="Ranthambore National Park, Rajasthan"
+        data-desc="A royal wildlife reserve famous for tiger sightings."
+        data-time="6:30 AM – 10:00 AM, 2:30 PM – 6:00 PM"
+        data-best="Oct – Jun"
+      >
+        <img src="Images/travel_img_2.jpg" alt="Ranthambore" />
+        <h3>Ranthambore National Park</h3>
+        <p>Rajasthan</p>
+      </div>
+      <div
+        class="card"
+        data-title="Mudumalai Wildlife Sanctuary, Tamil Nadu"
+        data-desc="A lush sanctuary connecting Western and Eastern Ghats."
+        data-time="7:00 AM – 6:00 PM"
+        data-best="Dec – Jun"
+      >
+        <img src="Images/travel_img_3.jpg" alt="Mudumalai" />
+        <h3>Mudumalai Wildlife Sanctuary</h3>
+        <p>Tamil Nadu</p>
+      </div>
+      <div
+        class="card"
+        data-title="Great Himalayan National Park, Himachal Pradesh"
+        data-desc="A paradise for trekkers with alpine meadows and rare species."
+        data-time="8:00 AM – 5:00 PM"
+        data-best="Mar – Nov"
+      >
+        <img src="Images/travel_img_4.jpg" alt="Himalayan Park" />
+        <h3>Great Himalayan National Park</h3>
+        <p>Himachal Pradesh</p>
+      </div>
+      <div
+        class="card"
+        data-title="Keoladeo Bird Sanctuary, Rajasthan"
+        data-desc="A bird-watcher's paradise with over 350 species of birds."
+        data-time="6:00 AM – 6:00 PM"
+        data-best="Oct – Mar"
+      >
+        <img src="Images/travel_img_5.jpg" alt="Keoladeo" />
+        <h3>Keoladeo Bird Sanctuary</h3>
+        <p>Rajasthan</p>
+      </div>
+
+      <!-- 🏰 Heritage -->
+      <div
+        class="card"
+        data-title="Majuli Island, Assam"
+        data-desc="The world's largest river island with Vaishnavite culture."
+        data-time="9:00 AM – 6:00 PM"
+        data-best="Oct – Mar"
+      >
+        <img src="Images/travel_img_6.jpg" alt="Majuli" />
+        <h3>Majuli Island</h3>
+        <p>Assam</p>
+      </div>
+      <div
+        class="card"
+        data-title="Amber Fort, Rajasthan"
+        data-desc="A majestic fort blending Hindu and Mughal architecture."
+        data-time="8:00 AM – 5:30 PM"
+        data-best="Oct – Mar"
+      >
+        <img src="Images/travel_img_7.jpg" alt="Amber Fort" />
+        <h3>Amber Fort</h3>
+        <p>Rajasthan</p>
+      </div>
+      <div
+        class="card"
+        data-title="Brihadeeswarar Temple, Tamil Nadu"
+        data-desc="An architectural marvel from the Chola dynasty."
+        data-time="6:00 AM – 8:00 PM"
+        data-best="Nov – Feb"
+      >
+        <img src="Images/travel_img_8.jpg" alt="Brihadeeswarar" />
+        <h3>Brihadeeswarar Temple</h3>
+        <p>Tamil Nadu</p>
+      </div>
+      <div
+        class="card"
+        data-title="Kangra Fort, Himachal Pradesh"
+        data-desc="The oldest fort in India amidst picturesque mountains."
+        data-time="9:00 AM – 6:00 PM"
+        data-best="Mar – Nov"
+      >
+        <img src="Images/travel_img_9.jpg" alt="Kangra" />
+        <h3>Kangra Fort</h3>
+        <p>Himachal Pradesh</p>
+      </div>
+      <div
+        class="card"
+        data-title="Hampi, Karnataka"
+        data-desc="Ruins of the Vijayanagara Empire, a UNESCO World Heritage site."
+        data-time="6:00 AM – 6:00 PM"
+        data-best="Oct – Feb"
+      >
+        <img src="Images/travel_img_10.jpg" alt="Hampi" />
+        <h3>Hampi</h3>
+        <p>Karnataka</p>
+      </div>
+
+      <!-- 🕉️ Spiritual -->
+      <div
+        class="card"
+        data-title="Kamakhya Temple, Assam"
+        data-desc="One of the most revered Shakti Peethas in India."
+        data-time="5:30 AM – 10:00 PM"
+        data-best="Oct – Mar"
+      >
+        <img src="Images/travel_img_11.jpg" alt="Kamakhya" />
+        <h3>Kamakhya Temple</h3>
+        <p>Assam</p>
+      </div>
+      <div
+        class="card"
+        data-title="Pushkar Lake, Rajasthan"
+        data-desc="Sacred lake surrounded by ghats and temples dedicated to Brahma."
+        data-time="5:00 AM – 9:00 PM"
+        data-best="Oct – Mar"
+      >
+        <img src="Images/travel_img_12.jpg" alt="Pushkar" />
+        <h3>Pushkar Lake</h3>
+        <p>Rajasthan</p>
+      </div>
+      <div
+        class="card"
+        data-title="Rameswaram Temple, Tamil Nadu"
+        data-desc="One of the Char Dhams, known for its long corridors and pillars."
+        data-time="5:00 AM – 9:00 PM"
+        data-best="Oct – Apr"
+      >
+        <img src="Images/travel_img_13.jpg" alt="Rameswaram" />
+        <h3>Rameswaram Temple</h3>
+        <p>Tamil Nadu</p>
+      </div>
+      <div
+        class="card"
+        data-title="Manikaran Sahib, Himachal Pradesh"
+        data-desc="A spiritual Sikh Gurudwara with natural hot springs."
+        data-time="Open 24 Hours"
+        data-best="Mar – Nov"
+      >
+        <img src="Images/travel_img_14.jpg" alt="Manikaran" />
+        <h3>Manikaran Sahib</h3>
+        <p>Himachal Pradesh</p>
+      </div>
+      <div
+        class="card"
+        data-title="Tawang Monastery, Arunachal Pradesh"
+        data-desc="The largest monastery in India and a serene Buddhist center."
+        data-time="7:00 AM – 7:00 PM"
+        data-best="Mar – Oct"
+      >
+        <img src="Images/travel_img_15.jpg" alt="Tawang" />
+        <h3>Tawang Monastery</h3>
+        <p>Arunachal Pradesh</p>
+      </div>
+
+      <!-- 🏞️ Adventure -->
+      <div
+        class="card"
+        data-title="Dzükou Valley Trek, Nagaland"
+        data-desc="A stunning trek through flower-covered meadows."
+        data-time="All Day"
+        data-best="Jun – Sep"
+      >
+        <img src="Images/travel_img_16.jpg" alt="Dzükou" />
+        <h3>Dzükou Valley Trek</h3>
+        <p>Nagaland</p>
+      </div>
+      <div
+        class="card"
+        data-title="Thar Desert Safari, Rajasthan"
+        data-desc="Experience camel rides and cultural performances under the stars."
+        data-time="Evening – Night"
+        data-best="Oct – Mar"
+      >
+        <img src="Images/travel_img_17.jpg" alt="Thar Desert" />
+        <h3>Thar Desert Safari</h3>
+        <p>Rajasthan</p>
+      </div>
+      <div
+        class="card"
+        data-title="Ooty Paragliding, Tamil Nadu"
+        data-desc="Fly over the Nilgiris and witness spectacular views of Ooty."
+        data-time="9:00 AM – 5:00 PM"
+        data-best="Sep – Apr"
+      >
+        <img src="Images/travel_img_18.jpg" alt="Ooty" />
+        <h3>Ooty Paragliding</h3>
+        <p>Tamil Nadu</p>
+      </div>
+      <div
+        class="card"
+        data-title="Solang Valley, Himachal Pradesh"
+        data-desc="A hub for skiing, paragliding, and snow adventures."
+        data-time="All Day"
+        data-best="Dec – Mar"
+      >
+        <img src="Images/travel_img_19.jpg" alt="Solang" />
+        <h3>Solang Valley</h3>
+        <p>Himachal Pradesh</p>
+      </div>
+      <div
+        class="card"
+        data-title="Nameri River Rafting, Assam"
+        data-desc="Raft through clear waters with lush green forests on both sides."
+        data-time="8:00 AM – 4:00 PM"
+        data-best="Oct – Apr"
+      >
+        <img src="Images/travel_img_20.jpg" alt="Nameri" />
+        <h3>Nameri River Rafting</h3>
+        <p>Assam</p>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-desc"></p>
+        <p><strong>Timings:</strong> <span id="popup-time"></span></p>
+        <p>
+          <strong>Best Time to Visit:</strong> <span id="popup-best"></span>
+        </p>
+        <div class="popup-actions">
+          <button class="heart-btn">❤️ Add to Wishlist</button>
+          <button class="map-btn">🗺️ View on Map</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>BharatRoots</h3>
+          <p>Exploring the soul of India — one state at a time.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/explore">Explore States</a></li>
+            <li><a href="/trade">Trade</a></li>
+            <li><a href="/profile">My Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: contact@bharatroots.in</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 BharatRoots. Made with ❤️ in India.</p>
+      </div>
+    </footer>
+
+    <script src="travel.js"></script>
+  </body>
+</html>

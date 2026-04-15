@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BharatRoots | Profile</title>
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="icon" type="image/png" href="website_icon_3.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="home.html" class="navbar-logo">BharatRoots</a>
+        <button class="navbar-toggle" id="mobile-menu"></button>
+        <ul class="navbar-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="map.html">Maps</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="travel.html">Travel</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- MAIN PROFILE SECTION -->
+    <main class="profile-main container">
+      <!-- PROFILE HEADER -->
+      <header class="profile-head">
+        <div class="avatar-wrap">
+          <img
+            id="profile-photo"
+            alt="User photo"
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop"
+          />
+        </div>
+
+        <div class="profile-meta">
+          <h1 id="profile-name">Lady_01</h1>
+          <p class="bio">Explorer of culture & code ✨</p>
+          <p id="member-since">Member since: January 2023</p>
+
+          <div class="profile-actions">
+            <button id="wishlistBtn" class="primary">Wishlist</button>
+            <button id="editProfile" class="secondary">Edit Profile</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- ACTIVITY GRID -->
+      <section class="activity-grid">
+        <div class="card recommendations">
+          <h2>Recommendations</h2>
+          <div id="recs-list" class="list">
+            <div class="item">Folk Dance Event - Rajasthan</div>
+            <div class="item">Handicraft Workshop - Gujarat</div>
+            <div class="item">Yoga Retreat - Rishikesh</div>
+          </div>
+        </div>
+
+        <div class="card activity-chart">
+          <div class="chart-inner">
+            <svg id="activity-pie" viewBox="0 0 200 200" class="pie"></svg>
+            <div class="chart-caption">
+              <h3>Cultural Activity</h3>
+              <p id="chart-sub">Projects & Events</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PURCHASES & VISITS -->
+      <section class="lower-grid">
+        <div class="card purchased">
+          <h2>Purchased</h2>
+          <ul id="purchased-list" class="simple-list">
+            <li>Traditional Art Poster - ₹450</li>
+            <li>Khadi Fabric - ₹1,200</li>
+          </ul>
+        </div>
+
+        <div class="card visited">
+          <h2>Visited / Registered</h2>
+          <ul id="visited-list" class="simple-list">
+            <li>Ajanta & Ellora Caves, Maharashtra</li>
+            <li>Konark Temple Festival, Odisha</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- WISHLIST MODAL -->
+    <div id="wishlistModal" class="modal">
+      <div class="modal-content">
+        <span id="modalClose" class="close">&times;</span>
+        <h3>Your Wishlists</h3>
+        <div class="wishlist-options">
+          <button id="openTravelWishlist">
+            Travel Wishlist <span id="travelCount" class="count">(0)</span>
+          </button>
+          <button id="openProductWishlist">
+            Product Wishlist <span id="productCount" class="count">(0)</span>
+          </button>
+        </div>
+        <p class="hint">Click any to view full page.</p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>BharatRoots</h3>
+          <p>Exploring the soul of India — one state at a time.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/explore">Explore States</a></li>
+            <li><a href="/trade">Trade</a></li>
+            <li><a href="/profile">My Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: contact@bharatroots.in</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 BharatRoots. Made with ❤️ in India.</p>
+      </div>
+    </footer>
+
+    <!-- <script src="profile.js"></script> -->
+  </body>
+</html>

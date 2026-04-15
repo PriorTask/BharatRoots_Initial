@@ -1,0 +1,248 @@
+/* RESET & GLOBALS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg: #f6fff2;
+  --card: #ffffff;
+  --border: #e5e5e5;
+  --muted: #555;
+  --accent: #2f4f4f;
+  --radius: 14px;
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* BODY */
+body {
+  background-color: var(--bg);
+  color: #111;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-top: 90px;
+}
+
+/* KEEPING YOUR NAVBAR STYLES UNCHANGED */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 32, 80, 0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-menu li a {
+  color: #f0f8ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Hero Section */
+.crafts_intro {
+  background: url("Images/crafts_page_img_1.jpg") center/cover no-repeat;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 50px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.overlay h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* Filter + Search */
+.filter-container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container input {
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.dropdowns {
+  display: flex;
+  gap: 15px;
+}
+
+.dropdowns select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 60px;
+  background-color: #fffaf5;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  color: #5a2e0d;
+  margin: 12px 0 5px;
+}
+
+.product-card p {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.add-btn {
+  background: #5a2e0d;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin: 15px 0 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #d97706;
+}
+
+@media (max-width: 600px) {
+  .dropdowns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 200px;
+}
+
+.footer h3,
+.footer h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer p,
+.footer a {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffae00;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}

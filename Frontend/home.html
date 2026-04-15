@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <title>BharatRoots</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="Images/icon_profile.jpg"
+      style="border-radius: 50%"
+    />
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  </head>
+  <body>
+    <!-- header section -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="home.html" class="navbar-logo">BharatRoots</a>
+
+        <button class="navbar-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <ul class="navbar-menu">
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="map.html">Maps</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="travel.html">Travel</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="vid_slider">
+      <div class="vid_slides">
+        <!-- Slide 1 -->
+        <div class="vid_slide" onclick="openSlide(0)">
+          <video autoplay muted loop>
+            <source src="Videos/vid_slider_video_1.mp4" type="video/mp4" />
+          </video>
+          <div class="vid_slide_text">
+            <h2>Culture</h2>
+            <p>Himachal Pradesh's traditional dance festival - Nati</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="vid_slide" onclick="openSlide(1)">
+          <video autoplay muted loop>
+            <source src="Videos/vid_slider_video_2.mp4" type="video/mp4" />
+          </video>
+          <div class="vid_slide_text">
+            <h2>Adventure</h2>
+            <p>Enjoy Rafting in the Ganges</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="vid_slide" onclick="openSlide(2)">
+          <video autoplay muted loop>
+            <source src="Videos/vid_slider_video_3.mp4" type="video/mp4" />
+          </video>
+          <div class="vid_slide_text">
+            <h2>Nature</h2>
+            <p>Relax amidst Ooty's calm and greenery</p>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="vid_slide" onclick="openSlide(2)">
+          <video autoplay muted loop>
+            <source src="Videos/vid_slider_video_4.mp4" type="video/mp4" />
+          </video>
+          <div class="vid_slide_text">
+            <h2>Wildlife</h2>
+            <p>Immerse yourself in the wild heart of India</p>
+          </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="vid_slide" onclick="openSlide(2)">
+          <video autoplay muted loop>
+            <source src="Videos/vid_slider_video_5.mp4" type="video/mp4" />
+          </video>
+          <div class="vid_slide_text">
+            <h2>Heritage</h2>
+            <p>Timeless traditions, eternal India</p>
+          </div>
+        </div>
+        <!-- Slide 6 -->
+        <div class="vid_slide" onclick="openSlide(2)">
+          <video autoplay muted loop>
+            <source src="Videos/vid_slider_video_6.mp4" type="video/mp4" />
+          </video>
+          <div class="vid_slide_text">
+            <h2>Spiritual</h2>
+            <p>India: Where faith meets serenity</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="nav left" onclick="prevVideoSlide()">❮</div>
+      <div class="nav right" onclick="nextVideoSlide()">❯</div>
+    </div>
+
+    <!-- destination image slider -->
+    <div class="destinations_img_slider_content">
+      <h1>DESTINATIONS</h1>
+      <p>for every bucket list</p>
+
+      <div class="img_slider">
+        <!-- Slide 1 -->
+        <div class="slide active">
+          <img src="Images/img_slider_1.jpg" alt="Mumbai" />
+          <div class="caption">Mumbai</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_2.jpg" alt="Goa" />
+          <div class="caption">Goa</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_3.jpg" alt="Darjeeling" />
+          <div class="caption">Darjeeling</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_4.jpg" alt="Halebidu" />
+          <div class="caption">Halebidu</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_5.jpg" alt="Karnataka" />
+          <div class="caption">Karnataka</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_6.jpg" alt="Varanasi" />
+          <div class="caption">Varanasi</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_7.jpg" alt="Haridwar" />
+          <div class="caption">Haridwar</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_8.jpg" alt="Udaipur" />
+          <div class="caption">Udaipur</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_9.jpg" alt="Manali" />
+          <div class="caption">Manali</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_10.jpg" alt="Amritsar" />
+          <div class="caption">Amritsar</div>
+        </div>
+
+        <div class="slide">
+          <img src="Images/img_slider_11.jpg" alt="Delhi" />
+          <div class="caption">Delhi</div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav left" onclick="prevImgSlide()">❮</div>
+        <div class="nav right" onclick="nextImgSlide()">❯</div>
+      </div>
+    </div>
+
+    <!-- attraction sites section -->
+    <div class="attractions_slider">
+      <h1>ATTRACTIONS</h1>
+      <p>-----worth a thousand stories-----</p>
+
+      <div class="attractions_slider_content">
+        <div class="att_slide">
+          <img src="Images/att_slide_img_1.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Jim Corbett National Park</h2>
+            <p>Uttarakhand</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_2.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Victoria Memorial</h2>
+            <p>Kolkata</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_3.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Mahabodhi Temple</h2>
+            <p>Bihar</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_4.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Sanchi Stupa</h2>
+            <p>Madhya Pradesh</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_5.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Anjuna Beach</h2>
+            <p>Goa</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_6.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Charminar</h2>
+            <p>Hyderabad</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_7.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Jagannath Puri</h2>
+            <p>Puri</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_8.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Taj Mahal</h2>
+            <p>Agra</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_9.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Red Fort</h2>
+            <p>Delhi</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_10.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Hawa Mahal</h2>
+            <p>Jaipur</p>
+          </div>
+        </div>
+
+        <div class="att_slide">
+          <img src="Images/att_slide_img_11.jpg" alt="error" />
+          <div class="att_info">
+            <h2>Rohtang Pass</h2>
+            <p>Himalayas</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="nav left" onclick="prevAttImgSlide()">❮</div>
+      <div class="nav right" onclick="nextAttImgSlide()">❯</div>
+
+      <button class="discover">DISCOVER MORE</button>
+    </div>
+
+    <!-- Itineraries Section -->
+    <div class="itin">
+      <h1 class="itin_heading">ITINERARIES</h1>
+      <p class="itin_para">--that beckon every traveller--</p>
+
+      <div class="itin_slider">
+        <!-- Previous Button -->
+        <button class="slide-btn prev">&#10094;</button>
+
+        <!-- Slider Container -->
+        <div class="itin_container">
+          <div
+            class="itin_slide"
+            style="background-image: url('Images/itin_slide_img_1.jpg')"
+          >
+            <div class="itin_text">
+              <p class="pred">2 Days | Madurai</p>
+              <p class="pblack">
+                Unravelling Madurai’s cultural and historical threads
+              </p>
+            </div>
+          </div>
+          <div
+            class="itin_slide"
+            style="background-image: url('Images/itin_slide_img_6.jpg')"
+          >
+            <div class="itin_text">
+              <p class="pred">3 Days | Tirupati</p>
+              <p class="pblack">A land of beauty and spiritual divinity.</p>
+            </div>
+          </div>
+          <div
+            class="itin_slide"
+            style="background-image: url('Images/itin_slide_img_4.jpg')"
+          >
+            <div class="itin_text">
+              <p class="pred">2 Days | Nainital</p>
+              <p class="pblack">Echoes of calm in Nainital’s hills</p>
+            </div>
+          </div>
+          <div
+            class="itin_slide"
+            style="background-image: url('Images/itin_slide_img_5.jpg')"
+          >
+            <div class="itin_text">
+              <p class="pred">4 Days | Delhi</p>
+              <p class="pblack">Colours and chaos blend in Delhi</p>
+            </div>
+          </div>
+          <div
+            class="itin_slide"
+            style="background-image: url('Images/itin_slide_img_9.jpg')"
+          >
+            <div class="itin_text">
+              <p class="pred">48 hours | Karnataka</p>
+              <p class="pblack">Waves and woods meet in Karnataka</p>
+            </div>
+          </div>
+          <div
+            class="itin_slide"
+            style="background-image: url('Images/itin_slide_img_8.jpg')"
+          >
+            <div class="itin_text">
+              <p class="pred">2 Days | Goa</p>
+              <p class="pblack">Goa glimmers in joy and freedom</p>
+            </div>
+          </div>
+          <div
+            class="itin_slide"
+            style="background-image: url('Images/itin_slide_img_10.jpg')"
+          >
+            <div class="itin_text">
+              <p class="pred">2 Days | Kanyakumari</p>
+              <p class="pblack">Discover Kanyakumari’s magical coastal charm</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Next Button -->
+        <button class="slide-btn next">&#10095;</button>
+      </div>
+
+      <button class="plan_itin">
+        <p>PLAN MY ITINERARY</p>
+      </button>
+    </div>
+
+    <div class="crafts_section">
+      <h1>EXQUISITE CRAFTS</h1>
+      <p>--of timeless tradition--</p>
+      <div class="crafts_container">
+        <div class="crafts_slider">
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_1.jpeg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Mizoram</p>
+                <h1>Paunchei</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_2.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Rajasthan</p>
+                <h1>Kathputlis</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_3.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Telangana</p>
+                <h1>Silver Filigree of Karimnagar</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_4.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Uttar Pradesh</p>
+                <h1>Zardozi Embroidery</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_5.jpeg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>West Bengal</p>
+                <h1>Santipore Saree</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img src="Images/huyt.jpeg" alt="" class="crafts_slide_img" />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Andhra Pradesh</p>
+                <h1>Durgi Stone Carvings</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_7.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Assam</p>
+                <h1>Muga Silk</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_8.jpeg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Bihar</p>
+                <h1>Khatwa - Patchwork of Bihar</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_9.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Punjab</p>
+                <h1>Phulkari</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_10.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Chattisgarh</p>
+                <h1>Bastar Dhokra</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_11.jpeg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Gujarat</p>
+                <h1>Patan Patola</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_12.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Jammu & Kashmir</p>
+                <h1>Walnut Wood Carving</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_13.jpeg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Karnataka</p>
+                <h1>Channapatna Toys & Dolls</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_14.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Kerala</p>
+                <h1>Aranmula Kannadi</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_15.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Madhya Pradesh</p>
+                <h1>Bagh Prints</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="crafts_slide">
+            <div class="crafts_slide_content">
+              <div class="crafts_slide_upperbox">
+                <img
+                  src="Images/crafts_slider_img_16.jpg"
+                  alt=""
+                  class="crafts_slide_img"
+                />
+              </div>
+              <div class="crafts_slide_lowerbox">
+                <p>Maharashtra</p>
+                <h1>Warli Painting</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>BharatRoots</h3>
+          <p>Exploring the soul of India — one state at a time.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/explore">Explore States</a></li>
+            <li><a href="/trade">Trade</a></li>
+            <li><a href="/profile">My Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: contact@bharatroots.in</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 BharatRoots. Made with ❤️ in India.</p>
+      </div>
+    </footer>
+    <script src="home.js"></script>
+  </body>
+</html>

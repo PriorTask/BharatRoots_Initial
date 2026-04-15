@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Travel Wishlist</title>
+    <link rel="stylesheet" href="wishlist.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h2>Travel Wishlist</h2>
+      <div>
+        <a href="profile.html">Profile</a> &nbsp; | &nbsp;
+        <a href="travel.html">Explore</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty" style="display: none">
+        No travel wishes yet — add some from Explore page ❤️
+      </div>
+    </main>
+
+    <script>
+      // wishlist-travel.js inline for simplicity
+      async function loadTravelWishlist() {
+        let items = [];
+        try {
+          const res = await fetch("/api/wishlist/travel");
+          if (!res.ok) throw new Error("no backend");
+          items = await res.json();
+        } catch (err) {
+          items = JSON.parse(localStorage.getItem("travelWishlist") || "[]");
+        }
+
+        const grid = document.getElementById("grid");
+        const empty = document.getElementById("empty");
+        grid.innerHTML = "";
+
+        if (!items.length) {
+          empty.style.display = "";
+          return;
+        } else empty.style.display = "none";
+
+        items.forEach((item) => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+          <img src="${
+            item.img || "Images/travel_placeholder.jpg"
+          }" alt="${escapeHtml(item.title)}"/>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.desc)}</p>
+          <p><strong>Timings:</strong> ${escapeHtml(item.time)}</p>
+          <p><strong>Best:</strong> ${escapeHtml(item.best)}</p>
+          <div class="card-actions">
+            <button class="btn remove">Remove</button>
+            <button class="btn openmap">View on Map</button>
+          </div>
+        `;
+          const removeBtn = card.querySelector(".remove");
+          removeBtn.addEventListener("click", async () => {
+            // try backend delete
+            try {
+              const res = await fetch(
+                `/api/wishlist/travel/${encodeURIComponent(item.id)}`,
+                { method: "DELETE" }
+              );
+              if (!res.ok) throw new Error("Delete failed");
+              // remove visually
+              card.remove();
+            } catch (err) {
+              // fallback local
+              let arr = JSON.parse(
+                localStorage.getItem("travelWishlist") || "[]"
+              );
+              arr = arr.filter((i) => i.id !== item.id);
+              localStorage.setItem("travelWishlist", JSON.stringify(arr));
+              card.remove();
+            }
+          });
+
+          const mapBtn = card.querySelector(".openmap");
+          mapBtn.addEventListener("click", () => {
+            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              item.title
+            )}`;
+            window.open(url, "_blank");
+          });
+
+          grid.appendChild(card);
+        });
+      }
+
+      function escapeHtml(s) {
+        return (s || "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      }
+
+      loadTravelWishlist();
+    </script>
+  </body>
+</html>

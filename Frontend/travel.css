@@ -1,0 +1,279 @@
+/* RESET & GLOBALS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg: #f6fff2;
+  --card: #ffffff;
+  --border: #e5e5e5;
+  --muted: #555;
+  --accent: #2f4f4f;
+  --radius: 14px;
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* BODY */
+body {
+  background-color: var(--bg);
+  color: #111;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-top: 90px;
+}
+
+/* KEEPING YOUR NAVBAR STYLES UNCHANGED */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 32, 80, 0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navbar-menu li a {
+  color: #f0f8ff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu li a.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.travel_intro {
+  margin-top: -20px;
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.travel_intro h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  gap: 10px;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.plan-btn {
+  padding: 10px 20px;
+  background-color: #e07a5f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.plan-btn:hover {
+  background-color: #cc6248;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.filter select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.destination-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 40px 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+.card p {
+  margin: 0 10px 15px;
+  color: #666;
+}
+
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup-actions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.heart-btn {
+  background: #e07a5f;
+  color: #fff;
+}
+
+.map-btn {
+  background: #81b29a;
+  color: #fff;
+}
+/* FOOTER */
+.footer {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 200px;
+}
+
+.footer h3,
+.footer h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer p,
+.footer a {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffae00;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}

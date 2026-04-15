@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive India Map</title>
+
+    <link href="map/map.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header section -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="home.html" class="navbar-logo">BharatRoots</a>
+
+        <button class="navbar-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <ul class="navbar-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="map.html" class="active">Maps</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="travel.html">Travel</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Map container -->
+    <div
+      id="map-container"
+      style="margin: auto; width: 80%; max-width: 800px"
+    ></div>
+
+    <!-- Map scripts -->
+    <script src="map/raphael.min.js"></script>
+    <script src="map/settings.js"></script>
+    <script src="map/paths.js"></script>
+    <script src="map/map.js"></script>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>BharatRoots</h3>
+          <p>Exploring the soul of India — one state at a time.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/explore">Explore States</a></li>
+            <li><a href="/trade">Trade</a></li>
+            <li><a href="/profile">My Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: contact@bharatroots.in</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 BharatRoots. Made with ❤️ in India.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var map = new FlaMap(map_cfg);
+        map.drawOnDomReady("map-container");
+      });
+    </script>
+  </body>
+</html>
